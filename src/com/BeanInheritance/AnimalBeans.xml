@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="animal" class="com.BeanInheritance.Animal">
+        <property name="name" value="Jack"/>
+        <property name="food" value="Meat"/>
+        <property name="sound" value="Boo"/>
+    </bean>
+
+    <bean id="cat" class="com.BeanInheritance.Cat" parent="animal">
+        <property name="name" value="Spot"/>
+        <property name="food" value="chicken"/>
+        <property name="sound" value="meow"/>
+    </bean>
+
+    <bean id="kitten" class="com.BeanInheritance.Kitten" parent="cat">
+        <property name="name" value="Lux"/>
+        <property name="food" value="milk"/>
+    </bean>
+
+    <bean id="shark" class="com.BeanInheritance.Shark" parent="animal">
+        <property name="name" value="Spam"/>
+        <property name="sound" value="BaaammmBum!"/>
+    </bean>
+
+</beans>
